@@ -1,4 +1,4 @@
-package com.example;
+package com.github.joffryferrater.configservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
