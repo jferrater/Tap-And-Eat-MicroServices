@@ -1,7 +1,11 @@
+---
 spring:
   cloud:
     config:
-      uri: https://github.com/jferrater/ConfigData
-      
+      server:
+        git:
+          uri: https://github.com/jferrater/ConfigData
+  application:
+    name: config-service
 server:
   port: 8888
