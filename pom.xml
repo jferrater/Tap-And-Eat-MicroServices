@@ -23,6 +23,9 @@
 		
 	<modules>
 		<module>ConfigService</module>
+		<module>AccountService</module>
+		<module>PriceService</module>
+		<module>MenuService</module>
 	</modules>
 
     <dependencies>
