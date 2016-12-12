@@ -2,7 +2,7 @@
 
 <h1>Tap-And-Eat-MicroServices</h1>
 </br>
-This is a microservices project for a restaurant or stores. Microservices are discovered automatically by a discovery service. Configurations are also centralized.
+This is a microservice architecture project for a restaurant or stores. Microservices are discovered automatically by a discovery service. Configurations are also centralized.
 <ul>
 <li>ConfigService</li>
 <li>AccountService</li>
