@@ -13,3 +13,13 @@ prices:
   image: jferrater/PriceService
   links:
    - configserver
+
+customers:
+  image: jferrater/CustomerService
+  links:
+   - configserver
+
+stores:
+  image: jferrater/StoreService
+  links:
+   - configserver
