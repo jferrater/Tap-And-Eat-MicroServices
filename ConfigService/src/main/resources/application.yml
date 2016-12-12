@@ -6,5 +6,7 @@ spring:
         git:
           uri: https://github.com/jferrater/ConfigData
 
+
 server:
   port: 8888
+  

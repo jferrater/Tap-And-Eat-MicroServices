@@ -1,0 +1,11 @@
+
+---
+spring:
+  application:
+    name: customer-service
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+server:
+  port: 8002

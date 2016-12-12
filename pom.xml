@@ -25,7 +25,7 @@
 		<module>ConfigService</module>
 		<module>AccountService</module>
 		<module>PriceService</module>
-		<module>MenuService</module>
+		<module>CustomerService</module>
 	</modules>
 
     <dependencies>
