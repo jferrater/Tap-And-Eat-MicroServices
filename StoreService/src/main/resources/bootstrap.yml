@@ -1,0 +1,9 @@
+---
+spring:
+  application:
+    name: store-service
+  cloud:
+    config:
+      uri: http://localhost:8888
+server:
+  port: 8003
