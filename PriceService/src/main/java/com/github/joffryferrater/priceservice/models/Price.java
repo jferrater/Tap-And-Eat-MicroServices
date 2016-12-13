@@ -18,8 +18,8 @@ public class Price {
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO)
 	private Long id;
-	@JsonProperty("Tag Name")
-	private String tagName;
+	@JsonProperty("Item Code")
+	private String itemCode;
 	@JsonProperty("Price")
 	private String price;
 	
@@ -27,9 +27,9 @@ public class Price {
 		super();
 	}
 	
-	public Price(String tagName, String price) {
+	public Price(String itemCode, String price) {
 		this();
-		this.tagName = tagName;
+		this.itemCode = itemCode;
 		this.price = price;
 	}
 	
@@ -41,12 +41,12 @@ public class Price {
 		this.id = id;
 	}
 	
-	public String getTagName() {
-		return tagName;
+	public String getItemCode() {
+		return itemCode;
 	}
 	
-	public void setTagName(String tagName) {
-		this.tagName = tagName;
+	public void setItemCode(String itemCode) {
+		this.itemCode = itemCode;
 	}
 	
 	public String getPrice() {

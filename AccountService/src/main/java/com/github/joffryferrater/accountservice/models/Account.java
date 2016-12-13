@@ -25,24 +25,32 @@ public class Account {
 	@NotNull
 	@JsonProperty("Email")
 	private String email;
-	@JsonProperty("Username")
-	private String username;
+	@JsonProperty("First Name")
+	private String firstName;
+	@JsonProperty("Last Name")
+	private String lastName;
+	@JsonProperty("Country Code")
+	private String countryCode;
+	@JsonProperty("Phone Number")
+	private String phoneNumber;
 
 	@JsonIgnore
 	private String password;
-	@JsonIgnore
-	private String confirmPassword;
+
 	
 	public Account(){
 		super();
 	}
 	
-	public Account(String email, String username, String password, String confirmPassword) {
+	public Account(String email, String firstName, String lastName, String password, 
+			String countryCode, String phoneNumber) {
 		this();
 		this.email = email;
-		this.username = username;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.password = password;
-		this.confirmPassword = confirmPassword;
+		this.countryCode = countryCode;
+		this.phoneNumber = phoneNumber;
 	}
 	
 	public Long getId() {
@@ -68,22 +76,39 @@ public class Account {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	public String getConfirmPassword() {
-		return confirmPassword;
-	}
-	
-	public void setConfirmPassword(String confirmPassword) {
-		this.confirmPassword = confirmPassword;
+
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public String getUserName() {
-		return username;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public void setUserName(String fullName) {
-		this.username = fullName;
+	public String getLastName() {
+		return lastName;
 	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getCountryCode() {
+		return countryCode;
+	}
+
+	public void setCountryCode(String countryCode) {
+		this.countryCode = countryCode;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
 	
 	
 }

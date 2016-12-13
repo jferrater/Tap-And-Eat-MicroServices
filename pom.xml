@@ -27,6 +27,8 @@
 		<module>PriceService</module>
 		<module>CustomerService</module>
 	    <module>StoreService</module>
+	    <module>ItemService</module>
+	    <module>FoodTrayService</module>
 	</modules>
 
     <dependencies>

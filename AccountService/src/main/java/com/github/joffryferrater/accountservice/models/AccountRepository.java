@@ -6,6 +6,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 @RepositoryRestResource(path="accounts", collectionResourceRel="accounts")
 public interface AccountRepository extends CrudRepository<Account, Long>{
 
-	Account findByUsername(String username);
+	Account findByEmail(String email);
 
 }

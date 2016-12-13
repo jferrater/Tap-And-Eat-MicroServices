@@ -1,0 +1,19 @@
+---
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
+      
+  application:
+    name: foodtray-service
+
+endpoints:
+  health:
+    sensitive: false
+
+security:
+  basic:
+    enabled: false
+    
+server:
+  port: 8005

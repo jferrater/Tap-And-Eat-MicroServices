@@ -1,5 +1,4 @@
-package com.github.joffryferrater.accountservice;
-
+package com.github.joffryferrater.itemservice;
 
 import javax.annotation.PostConstruct;
 
@@ -8,8 +7,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-import com.github.joffryferrater.accountservice.models.Account;
-import com.github.joffryferrater.accountservice.models.AccountRepository;
+import com.github.joffryferrater.itemservice.models.Item;
+import com.github.joffryferrater.itemservice.models.ItemRepository;
 
 /**
  * 
@@ -18,20 +17,18 @@ import com.github.joffryferrater.accountservice.models.AccountRepository;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-public class AccountServiceApplication {
+public class ItemServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AccountServiceApplication.class, args);
+		SpringApplication.run(ItemServiceApplication.class, args);
 	}
 	
 	@Autowired
-	AccountRepository accountRepo;
+	ItemRepository itemRepository;
 	
 	@PostConstruct
 	public void init() {
-		Account account = new Account("joffry.ferrater@gmail.com", "Joffry", "Ferrater",
-				"123", "+46", "07694540723");
-		accountRepo.save(account);
+		Item item = new Item("BUR01", "burger");
+		itemRepository.save(item);
 	}
-	
 }
