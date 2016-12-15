@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient("PRICE-SERVICE")
 public interface PriceServiceRepository {
 
-	@RequestMapping(method=RequestMethod.GET, value="/prices/{itemCode}")
+	@RequestMapping(method=RequestMethod.GET, value="/prices/search/findByItemCode?itemCode={itemCode}")
 	Price findByItemCode(@PathVariable("itemCode") String itemCode);
 }

@@ -13,6 +13,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient("ITEM-SERVICE")
 public interface ItemServiceRepository {
 
-	@RequestMapping(method=RequestMethod.GET, value="/items/{id}")
-	Item findItem(@PathVariable("id") Long id);
+	@RequestMapping(method=RequestMethod.GET, value="/items/search/findByItemCode?itemCode={itemCode}")
+	Item findByItemCode(@PathVariable("itemCode") String itemCode);
 }

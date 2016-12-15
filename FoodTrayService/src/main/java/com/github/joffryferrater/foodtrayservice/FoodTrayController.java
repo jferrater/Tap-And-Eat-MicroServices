@@ -1,8 +1,13 @@
 package com.github.joffryferrater.foodtrayservice;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.github.joffryferrater.foodtrayservice.repository.Item;
@@ -17,7 +22,7 @@ import com.github.joffryferrater.foodtrayservice.repository.TrayItem;
  *
  */
 @RestController
-@RequestMapping("/api/foodtrays")
+@RequestMapping("/foodtrays")
 public class FoodTrayController {
 
 	@Autowired
@@ -25,21 +30,35 @@ public class FoodTrayController {
 	@Autowired
 	PriceServiceRepository priceServiceRepo;
 	
-	@RequestMapping("/{id}")
-	public Item getItem(@PathVariable Long id) {
-		Item item = itemServiceRepository.findItem(id);
-		if(item == null) {
-			System.out.println("Item not found");
-		}
-		return item;
+	private List<TrayItem> trayItems = new ArrayList<TrayItem>();
+	
+	@RequestMapping(value="/price/{itemCode}", method=RequestMethod.GET)
+	public Price getPrice(@PathVariable("itemCode") String itemCode) {
+		return priceServiceRepo.findByItemCode(itemCode);
 	}
 	
-	@RequestMapping("/tray/{id}")
-	public TrayItem getTrayItem(@PathVariable Long id) {
-		Item item = itemServiceRepository.findItem(id);
-		String itemCode = item.getItemCode();
+	@RequestMapping(value="/item/{itemCode}", method=RequestMethod.GET)
+	public Item getItem(@PathVariable("itemCode") String itemCode) {
+		return itemServiceRepository.findByItemCode(itemCode);
+	}
+	
+	@RequestMapping(value="/{itemCode}", method=RequestMethod.GET)
+	public TrayItem getTrayItem(@PathVariable("itemCode") String itemCode) {
+		Item item = itemServiceRepository.findByItemCode(itemCode);
 		Price price = priceServiceRepo.findByItemCode(itemCode);
-		TrayItem trayItem = new TrayItem(item, price);
+		TrayItem trayItem = new TrayItem(item.getName(), price.getPrice());
 		return trayItem;
 	}
+	
+	@RequestMapping(value={"/", ""}, method=RequestMethod.POST)
+	public List<TrayItem> addFoodTrayItem(TrayItem trayItem) {
+		trayItems.add(trayItem);
+		return trayItems;
+	}
+	
+	@RequestMapping(value={"/", ""}, method=RequestMethod.GET)
+	public List<TrayItem> getItems() {
+		return trayItems;
+	}
+	
 }

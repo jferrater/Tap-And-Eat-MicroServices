@@ -1,7 +1,7 @@
 package com.github.joffryferrater.foodtrayservice.repository;
 
-import java.util.ArrayList;
-import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * 
@@ -10,29 +10,19 @@ import java.util.List;
  */
 public class TrayItem {
 
-	private Item item;
-	private Price price;
-	
+	@JsonProperty("Name")
 	private String name;
+	@JsonProperty("Price")
 	private String amount;
 	
-	private List<TrayItem> items = new ArrayList<TrayItem>();
-	
+
 	public TrayItem() {
 		super();
 	}
 	
-	public TrayItem(Item item, Price price) {
-		this.name = item.getName();
-		this.amount = price.getPrice();
-	}
-	
-	public Price getPrice() {
-		return price;
-	}
-	
-	public Item getItem() {
-		return item;
+	public TrayItem(String name, String amount) {
+		this.name = name;
+		this.amount = amount;
 	}
 	
 	public String getName() {
@@ -43,11 +33,4 @@ public class TrayItem {
 		return amount;
 	}
 	
-	public void addTrayItem(TrayItem itemToAdd) {
-		this.items.add(itemToAdd);
-	}
-	
-	public List<TrayItem> getTrayItems() {
-		return items;
-	}
 }
