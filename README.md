@@ -22,10 +22,9 @@ Note: Documentation is not yet complete. All micro services will be documented.
 <h3>Installing docker engine:</h3>
  https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
 </br>
-<h3>Installing docker-compose:<h3> 
- https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-16-04
- </br>
-
+<h3>Installing docker-compose:</h3> 
+   https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-16-04
+</br>
 <h3>Testing the microservices with Docker:</h3>
  1. $ git clone https://github.com/jferrater/Tap-And-Eat-MicroServices.git
  2. $ cd Tap-And-Eat-MicroServices
