@@ -1,4 +1,6 @@
 "#Tap-And-Eat-MicroServices" 
+</br>
+Note: Documentation is not yet complete. All micro services will be documented. Will also provide soon how to build and create docker image for the project.
 
 <h1>Tap-And-Eat-MicroServices</h1>
 </br>
