@@ -9,6 +9,8 @@ This is a microservice architecture project for a restaurant or stores. Microser
 <li>PriceService</li>
 <li>CustomerService</li>
 <li>StoreService</li>
+<li>ItemService</li>
+<li>FoodTrayService</li>
 </ul>
 <h2>ConfigService</h2>
 </br>
