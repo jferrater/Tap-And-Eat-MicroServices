@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author Joffry Ferrater
  *
  */
-@FeignClient("ITEM-SERVICE")
+@FeignClient(value="ITEM-SERVICE", fallback=ItemServiceFallback.class)
 public interface ItemServiceRepository {
 
 	@RequestMapping(method=RequestMethod.GET, value="/items/search/findByItemCode?itemCode={itemCode}")

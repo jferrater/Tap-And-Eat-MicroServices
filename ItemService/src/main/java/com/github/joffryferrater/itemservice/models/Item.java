@@ -4,8 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 /**
  * 
@@ -13,36 +17,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  *
  */
 @Entity
+@Table(name = "items")
+@Data
+@RequiredArgsConstructor
 public class Item {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	@JsonProperty("Item Code")
-	private String itemCode;
+	private final String itemCode;
 	@JsonProperty("Name")
-	private String name;
+	private final String name;
 	
-	public Item() {
-		super();
-	}
-	
-	public Item(String itemCode, String name) {
-		this.name = name;
-		this.itemCode = itemCode;
-	}
-	
-	public Long getId() {
-		return id;
-	}
-	
-	public String getName() {
-		return name;
-	}
-
-	public String getItemCode() {
-		return itemCode;
-	}
-
 }
 
