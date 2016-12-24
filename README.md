@@ -38,6 +38,7 @@ Note: Documentation is not yet complete. All micro services will be documented.
 This is a microservice architecture project for a restaurant or stores. Microservices are discovered automatically by a discovery service. Configurations are also centralized.
 <ul>
 <li>ConfigService</li>
+<li>DiscoveryService</li>
 <li>AccountService</li>
 <li>PriceService</li>
 <li>CustomerService</li>
@@ -47,7 +48,10 @@ This is a microservice architecture project for a restaurant or stores. Microser
 </ul>
 <h3>ConfigService</h3>
 </br>
-The ConfigService provides centralized configuration and discovery service for micro services.
+The ConfigService provides centralized configuration.
+<h3>DiscoveryService</h3>
+</br>
+Discovers micro services.
 <h3>AccountService</h3>
 </br>
 The AccountService provides API for managing accounts. It has the CRUD API in /accounts endpoint.
