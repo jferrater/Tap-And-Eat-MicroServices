@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.github.joffryferrater.foodtrayservice.repository.Item;
+import com.github.joffryferrater.foodtrayservice.domain.Item;
+import com.github.joffryferrater.foodtrayservice.domain.Price;
+import com.github.joffryferrater.foodtrayservice.domain.TrayItem;
 import com.github.joffryferrater.foodtrayservice.repository.ItemServiceRepository;
-import com.github.joffryferrater.foodtrayservice.repository.Price;
 import com.github.joffryferrater.foodtrayservice.repository.PriceServiceRepository;
-import com.github.joffryferrater.foodtrayservice.repository.TrayItem;
 
 /**
  * 

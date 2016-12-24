@@ -3,17 +3,18 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>config-service</artifactId>
+	<artifactId>discovery-service</artifactId>
 	<packaging>jar</packaging>
 
-	<name>ConfigService</name>
-	<description>Configuration server for Eat-And-Tap-Microservices</description>
+	<name>discovery-service</name>
+	<description>Application for discovering micro-services</description>
 
-	<parent>
-		<groupId>com.github.joffryferrater</groupId>
+    <parent>
+        <groupId>com.github.joffryferrater</groupId>
         <artifactId>tap-and-eat-microservices</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-	</parent>
+    </parent>
+
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -24,12 +25,9 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-config-server</artifactId>
+			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>
-		<dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -37,7 +35,19 @@
 		</dependency>
 	</dependencies>
 
-    <build>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Camden.SR3</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+ <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -77,4 +87,5 @@
         </plugins>
     </build>
     
+
 </project>

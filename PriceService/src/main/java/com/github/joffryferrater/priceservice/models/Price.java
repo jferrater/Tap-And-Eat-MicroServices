@@ -9,7 +9,6 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 /**
  * 
@@ -19,16 +18,23 @@ import lombok.RequiredArgsConstructor;
 @Entity
 @Table (name="prices")
 @Data
-@RequiredArgsConstructor
 public class Price {
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO)
 	private Long id;
 	@JsonProperty("Item Code")
-	private final String itemCode;
+	private String itemCode;
 	@JsonProperty("Price")
-	private final String price;
+	private String price;
+
+	public Price() {
+		super();
+	}
 	
-	
+	public Price(String itemCode, String price) {
+		this();
+		this.itemCode = itemCode;
+		this.price = price;
+	}
 }

@@ -1,12 +1,14 @@
-package com.github.joffryferrater.foodtrayservice.repository;
+package com.github.joffryferrater.foodtrayservice.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 /**
  * 
  * @author Joffry Ferrater
  *
  */
+@lombok.Getter
 public class Item {
 
 	@JsonProperty("Item Code")
@@ -19,15 +21,7 @@ public class Item {
 	}
 	
 	public Item(String itemCode, String name) {
-		this.name = name;
 		this.itemCode = itemCode;
-	}
-	
-	public String getName() {
-		return name;
-	}
-
-	public String getItemCode() {
-		return itemCode;
+		this.name = name;
 	}
 }

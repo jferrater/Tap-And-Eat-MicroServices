@@ -1,4 +1,9 @@
 ---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+      
 spring:
   cloud:
     config:
@@ -8,5 +13,5 @@ spring:
 
 
 server:
-  port: 8888
+  port: 8167
   

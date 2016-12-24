@@ -1,4 +1,4 @@
-package com.github.joffryferrater.foodtrayservice.repository;
+package com.github.joffryferrater.foodtrayservice.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

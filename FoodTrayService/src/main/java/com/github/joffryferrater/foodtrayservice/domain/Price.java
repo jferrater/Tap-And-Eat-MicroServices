@@ -1,4 +1,4 @@
-package com.github.joffryferrater.foodtrayservice.repository;
+package com.github.joffryferrater.foodtrayservice.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @author Joffry Ferrater
  *
  */
+@lombok.Getter
 public class Price {
 
 	@JsonProperty("Item Code")
@@ -22,15 +23,6 @@ public class Price {
 		this();
 		this.itemCode = itemCode;
 		this.price = price;
-	}
-	
-	public String getItemCode() {
-		return itemCode;
-	}
-	
-
-	public String getPrice() {
-		return price;
 	}
 
 }
