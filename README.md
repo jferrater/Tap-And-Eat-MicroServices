@@ -34,33 +34,32 @@ Note: Documentation is not yet complete. All micro services will be documented.
  6. Open Firefox and check discovered microservices at http://localhost:8888
  </br>
  </br>
-<h2>Microservices</h2>
-This is a microservice architecture project for a restaurant or stores. Microservices are discovered automatically by a discovery service. Configurations are also centralized.
-<ul>
-<li>ConfigService</li>
-<li>DiscoveryService</li>
-<li>AccountService</li>
-<li>PriceService</li>
-<li>CustomerService</li>
-<li>StoreService</li>
-<li>ItemService</li>
-<li>FoodTrayService</li>
-</ul>
-<h3>ConfigService</h3>
-</br>
-The ConfigService provides centralized configuration.
-<h3>DiscoveryService</h3>
-</br>
-Discovers micro services.
-<h3>AccountService</h3>
-</br>
-The AccountService provides API for managing accounts. It has the CRUD API in /accounts endpoint.
-<h3>PriceService</h3>
-</br>
-The PriceService provides API for managing prices. It has the CRUD api at /prices endpoint.
-<h3>StoreService</h3>
-</br>
-The StoreService provides API for managing stores.
-<h3>CustomerService</h3>
-</br>
-The CustomerService provides API for managing customers.
+<div>
+   <h2>Microservices</h2>
+   <p>This is a microservice architecture project for a restaurant or stores. Microservices are discovered automatically by a discovery service. Configurations are also centralized.</p>
+   <ul>
+   <li>ConfigService</li>
+   <li>DiscoveryService</li>
+   <li>AccountService</li>
+   <li>PriceService</li>
+   <li>CustomerService</li>
+   <li>StoreService</li>
+   <li>ItemService</li>
+   <li>FoodTrayService</li>
+   </ul>
+</div>
+<div>
+   <h3>ConfigService</h3>
+   <p>The ConfigService provides centralized configuration.</p>
+   <h3>DiscoveryService</h3>
+   <p>Discovers micro services.</p>
+   <h3>AccountService</h3>
+   <p>The AccountService provides API for managing accounts. It has the CRUD API in /accounts endpoint.</p>
+   <h3>PriceService</h3>
+   <p>The PriceService provides API for managing prices. It has the CRUD api at /prices endpoint.</p>
+   <h3>StoreService</h3>
+   <p>The StoreService provides API for managing stores.</p>
+   <h3>CustomerService</h3>
+   <p>The CustomerService provides API for managing customers.</p>
+</div>
+
