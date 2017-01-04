@@ -1,6 +1,6 @@
 "#Tap-And-Eat-MicroServices" 
 </br>
-Note: Documentation is not yet complete. All micro services will be documented. 
+<p>Note: Documentation is not yet complete. All micro services will be documented. </p>
 
 <h1>Tap-And-Eat-MicroServices</h1>
 </br>
