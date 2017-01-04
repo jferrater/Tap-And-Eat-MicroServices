@@ -14,7 +14,7 @@ Note: Documentation is not yet complete. All micro services will be documented.
    - docker compose
 </br>
 <h3>Installing Maven:</h3>
-  apt-get install maven
+  <p>apt-get install maven</p>
 </br>
 <h3>Installing java 8:</h3> 
  http://tipsonubuntu.com/2016/07/31/install-oracle-java-8-9-ubuntu-16-04-linux-mint-18/
